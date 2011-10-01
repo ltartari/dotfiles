@@ -1,0 +1,3 @@
+if has("mac")
+  set guifont=Menlo:h18
+endif

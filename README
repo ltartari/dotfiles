@@ -1,0 +1,21 @@
+Dot Files
+
+current environment:
+  zsh
+  mvim with janus
+  ack
+  git
+  ruby
+  node.js
+
+TO DO: make install.sh set the symlinks.
+ __________________________________
+< Now you're thinking with Portals >
+ ----------------------------------
+     \
+      \
+        ,__, |            |
+        (oo)\|            |___
+        (__)\|            |   )\_
+             |            |_w |  \
+             |            |  ||   *
