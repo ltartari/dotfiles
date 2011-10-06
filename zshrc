@@ -1,5 +1,7 @@
 #!/bin/zshrc
-export ZSH_HISTORY_PATH=$HOME/.zsh_history
+
+autoload -U compinit
+compinit
 
 for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
   source $zsh_source
