@@ -1,5 +1,7 @@
 #!/bin/zsh
-# to install source this file from your .zshrc file
+
+# Change this to reflect your installation directory
+export __GIT_PROMPT_DIR=~/.zsh/git_prompt
 
 # allow for functions in the prompt.
 setopt PROMPT_SUBST
@@ -10,7 +12,7 @@ add-zsh-hook chpwd chpwd_update_git_vars
 add-zsh-hook preexec preexec_update_git_vars
 add-zsh-hook precmd precmd_update_git_vars
 
-## Function definitions
+# Function definitions
 function preexec_update_git_vars() {
     case "$2" in
         git*)
@@ -32,9 +34,8 @@ function chpwd_update_git_vars() {
 
 function update_current_git_vars() {
     unset __current_git_status
-
-    local gitstatus="$__GIT_PROMPT_DIR/gitstatus.py"
-    _git_status=`python ${gitstatus}`
+    local gitstatus="$__GIT_PROMPT_DIR/git_prompt.py"
+    _git_status=`python ${gitstatus}` 2>/dev/null
     __current_git_status=("${(@f)_git_status}")
     git_branch=$__current_git_status[1]
     git_remote=$__current_git_status[2]
@@ -74,9 +75,9 @@ git_super_status() {
 }
 
 # Default values for the appearance of the prompt. Configure at will.
-ZSH_THEME_GIT_PROMPT_PREFIX="("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"
-ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="·"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}●"
 ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}✗"

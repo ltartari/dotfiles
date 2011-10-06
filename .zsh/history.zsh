@@ -1,7 +1,7 @@
 HISTSIZE=500
 SAVEHIST=500
-export ZSH_HISTORY_PATH=$HOME/.zsh_profile.d/zsh_history
-HISTFILE=~/.zsh_profile.d/zsh_history
+export ZSH_HISTORY_PATH=$HOME/.zsh/zsh_history
+HISTFILE=~/.zsh/zsh_history
 setopt append_history
 setopt inc_append_history
 setopt extended_history

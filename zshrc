@@ -3,7 +3,7 @@
 autoload -U compinit
 compinit
 
-for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
+for zsh_source in $HOME/.zsh/*.zsh; do
   source $zsh_source
 done
 
