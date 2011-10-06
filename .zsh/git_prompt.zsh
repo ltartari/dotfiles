@@ -33,17 +33,17 @@ function chpwd_update_git_vars() {
 }
 
 function update_current_git_vars() {
-    unset __current_git_status
-    local gitstatus="$__GIT_PROMPT_DIR/git_prompt.py"
-    _git_status=`python ${gitstatus}` 2>/dev/null
-    __current_git_status=("${(@f)_git_status}")
-    git_branch=$__current_git_status[1]
-    git_remote=$__current_git_status[2]
-    git_staged=$__current_git_status[3]
-    git_conflicts=$__current_git_status[4]
-    git_changed=$__current_git_status[5]
-    git_untracked=$__current_git_status[6]
-    git_clean=$__current_git_status[7]
+    unset __CURRENT_GIT_STATUS
+    local git_status="$__GIT_PROMPT_DIR/git_prompt.py"
+    _git_status=`python ${git_status}` 2>/dev/null
+    __CURRENT_GIT_STATUS=("${(@f)_git_status}")
+    git_branch=$__CURRENT_GIT_STATUS[1]
+    git_remote=$__CURRENT_GIT_STATUS[2]
+    git_staged=$__CURRENT_GIT_STATUS[3]
+    git_conflicts=$__CURRENT_GIT_STATUS[4]
+    git_changed=$__CURRENT_GIT_STATUS[5]
+    git_untracked=$__CURRENT_GIT_STATUS[6]
+    git_clean=$__CURRENT_GIT_STATUS[7]
 }
 
 git_super_status() {
