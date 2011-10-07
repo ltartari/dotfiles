@@ -3,14 +3,23 @@
 autoload -U compinit
 compinit
 
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+typeset -ga chpwd_functions
+
+preexec_functions+='preexec_update_git_vars'
+precmd_functions+='precmd_update_git_vars'
+chpwd_functions+='chpwd_update_git_vars'
+
 for zsh_source in $HOME/.zsh/*.zsh; do
   source $zsh_source
 done
 
-# aliases
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-# zshenv
 export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules
