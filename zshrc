@@ -1,10 +1,15 @@
 #!/bin/zshrc
 
-autoload -U compinit
-compinit
-
 fpath=(~/.zsh/functions $fpath)
+
 autoload -U ~/.zsh/functions/*(:t)
+autoload -U compinit && compinit
+autoload -U colors && colors
+autoload -Uz promptinit && promptinit
+
+prompt off
+
+setopt PROMPT_SUBST
 
 typeset -ga preexec_functions
 typeset -ga precmd_functions
