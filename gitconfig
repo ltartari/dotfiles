@@ -1,6 +1,6 @@
 [user]
   name        = Leo Tartari
-  email       = ltartari@gmail.com
+  email       = ltartari@thoughtworks.com
 [color]
   diff        = auto
   status      = auto
@@ -18,7 +18,7 @@
   lola  = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls    = ls-files
 [core]
-  editor = vim -w
+  editor = vim
   excludesfile = /Users/leonardotartari/.gitignore
 [merge]
   tool    = opendiff
