@@ -23,3 +23,5 @@ alias lh="ls -Alh"
 alias grep='grep --color=auto'
 
 alias tmux="TERM=screen-256color-bce tmux -u"
+
+alias mvim="mvim --remote-silent"

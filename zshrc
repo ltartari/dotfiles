@@ -7,8 +7,6 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -Uz promptinit && promptinit
 
-eval "$(rbenv init -)"
-
 prompt off
 
 setopt PROMPT_SUBST
@@ -31,3 +29,5 @@ fi
 
 export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules
 export CC=/usr/bin/gcc-4.2
+
+source ~/.hitch.zsh
