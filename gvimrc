@@ -22,5 +22,5 @@ imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
 macmenu Window.Toggle\ Full\ Screen\ Mode
 
 " Set to full screen
-set fuoptions=maxvert,maxhorz
-au GUIEnter * set fullscreen
+" set fuoptions=maxvert,maxhorz
+" au GUIEnter * set fullscreen

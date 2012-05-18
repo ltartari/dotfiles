@@ -22,3 +22,5 @@
   excludesfile = /Users/leonardotartari/.gitignore
 [merge]
   tool    = opendiff
+[branch]
+	autosetupmerge = true
