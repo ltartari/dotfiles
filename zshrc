@@ -7,8 +7,6 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -Uz promptinit && promptinit
 
-eval "$(rbenv init -)"
-
 prompt off
 
 setopt PROMPT_SUBST
@@ -29,5 +27,10 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules
 export CC=/usr/bin/gcc-4.2
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+alias tmux="TERM=screen-256color-bce tmux"
+
+source ~/nvm/nvm.sh
