@@ -1,4 +1,7 @@
-set guifont=Menlo:h16
+set guifont=Menlo:h14
+
+colorscheme solarized
+set background=dark
 
 " Disable toolbar
 set guioptions=egmrt

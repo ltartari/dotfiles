@@ -4,31 +4,39 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
-Bundle                       'gmarik/vundle'
-Bundle                              'fugitive.vim'
-Bundle                              'L9'
-Bundle                              'FuzzyFinder'
-Bundle        'git://git.wincent.com/command-t.git'
-Bundle  'git://github.com/scrooloose/nerdcommenter.git'
+Bundle 'gmarik/vundle'
+Bundle 'fugitive.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle  'git://github.com/bbommarito/vim-slim.git'
-Bundle       'git://github.com/tpope/vim-haml.git'
-Bundle       'git://github.com/tpope/vim-rails.git'
-Bundle       'git://github.com/tpope/vim-git.git'
-Bundle    'git://github.com/msanders/snipmate.vim.git'
-Bundle     'git://github.com/mileszs/ack.vim.git'
-Bundle    'git://github.com/pangloss/vim-javascript.git'
-Bundle      'git://github.com/kchmck/vim-coffee-script.git'
-Bundle    'git://github.com/ervandew/supertab.git'
+Bundle 'git://github.com/bbommarito/vim-slim.git'
+Bundle 'git://github.com/tpope/vim-haml.git'
+Bundle 'git://github.com/groenewege/vim-less.git'
+Bundle 'git://github.com/tpope/vim-rails.git'
+Bundle 'git://github.com/tpope/vim-git.git'
+Bundle 'git://github.com/msanders/snipmate.vim.git'
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'git://github.com/pangloss/vim-javascript.git'
+Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/digitaltoad/vim-jade.git'
-Bundle      'git://github.com/wavded/vim-stylus.git'
-Bundle   'git://github.com/cakebaker/scss-syntax.vim.git'
+Bundle 'git://github.com/wavded/vim-stylus.git'
+Bundle 'git://github.com/cakebaker/scss-syntax.vim.git'
+Bundle 'git://github.com/oguzbilgic/sexy-railscasts-theme.git'
+Bundle 'git://github.com/jpo/vim-railscasts-theme.git'
+Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'bufexplorer.zip'
 set number
 set ruler
 syntax on
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 set encoding=utf-8
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show unicode glyphs
 " Whitespace stuff
 set nowrap
 set tabstop=2
