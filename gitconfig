@@ -1,27 +1,35 @@
 [user]
-  name        = Leo Tartari
-	email = ltartari@gmail.com
+  name            = Leo Tartari
+  email           = ltartari@gmail.com
 [color]
-  diff        = auto
-  status      = auto
-  branch      = auto
-  interactive = auto
+  diff            = auto
+  status          = auto
+  branch          = auto
+  interactive     = auto
 [alias]
-  pr    = pull --rebase
-  st    = status
-  co    = checkout
-  ci    = commit
-  dc    = diff --cached
-  l     = log
-  lg    = log -p
-  lol   = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola  = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  lll   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  ls    = ls-files
+  pr              = pull --rebase
+  s               = status
+  st              = status --porcelain
+  co              = checkout
+  ci              = commit
+  dc              = diff --cached
+  l               = log
+  lg              = log -p
+  lol             = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola            = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lll             = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ls              = ls-files
+  latest          = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
 [core]
-  editor = vim
-  excludesfile = /Users/leonardotartari/.gitignore
+  editor          = vim
+  excludesfile    = /Users/leonardotartari/.gitignore
 [merge]
-  tool    = opendiff
+  tool            = opendiff
 [branch]
-	autosetupmerge = true
+  autosetupmerge  = true
+[github]
+	user = ltartari
+[ghi]
+	token = a1aee51a886ef98eaad586e3f50a3c57e1bed9e2
+[push]
+	default = matching

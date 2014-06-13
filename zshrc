@@ -27,10 +27,15 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-export CC=/usr/bin/gcc-4.2
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# export CC=/usr/bin/gcc-4.2
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-source ~/nvm/nvm.sh
+source ~/.nvm/nvm.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export SSL_CERT_FILE=/Users/leonardotartari/.cacert.pem
+
+source "$HOME/.private-env"

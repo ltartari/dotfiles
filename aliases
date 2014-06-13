@@ -1,12 +1,12 @@
+# LAZY MFFER STUFF
+
 alias r="rails"
 alias g="git"
 
 alias s="bundle exec rspec"
 alias cuc="bundle exec cucumber"
 
-alias gi="gem install"
-alias giv="gem install -v"
-alias gci="git pull --rebase && rake && git push"
+alias switcheroo="git stash && git pull --rebase && git stash pop"
 
 alias b="bundle"
 alias be="bundle exec"
@@ -20,8 +20,12 @@ alias l="ls"
 alias ll="ls -al"
 alias lh="ls -Alh"
 
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
 
 alias tmux="TERM=screen-256color-bce tmux -u"
 
 alias mvim="mvim --remote-silent"
+
+alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
+
+alias git="hub"

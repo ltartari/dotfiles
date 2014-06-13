@@ -1,86 +1,62 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 " let Vundle manage Vundle
-" required!
+" required! 
 Bundle 'gmarik/vundle'
-Bundle 'fugitive.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'bufexplorer.zip'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/bbommarito/vim-slim.git'
-Bundle 'git://github.com/tpope/vim-haml.git'
-Bundle 'git://github.com/groenewege/vim-less.git'
-Bundle 'git://github.com/tpope/vim-rails.git'
-Bundle 'git://github.com/tpope/vim-git.git'
-Bundle 'git://github.com/msanders/snipmate.vim.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'git://github.com/pangloss/vim-javascript.git'
-Bundle 'git://github.com/kchmck/vim-coffee-script.git'
-Bundle 'git://github.com/ervandew/supertab.git'
-Bundle 'git://github.com/digitaltoad/vim-jade.git'
-Bundle 'git://github.com/wavded/vim-stylus.git'
-Bundle 'git://github.com/cakebaker/scss-syntax.vim.git'
-Bundle 'git://github.com/oguzbilgic/sexy-railscasts-theme.git'
-Bundle 'git://github.com/jpo/vim-railscasts-theme.git'
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'git://github.com/wavded/vim-stylus.git'
-Bundle 'git://github.com/cakebaker/scss-syntax.vim.git'
 
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+Bundle 'vim-scripts/jade.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'ap/vim-css-color'
+Bundle 'pangloss/vim-javascript'
+Bundle 'slim-template/vim-slim'
+Bundle 'othree/html5.vim'
+Bundle 'bling/vim-airline'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
+Bundle 'junegunn/goyo.vim'
+Bundle 'bling/vim-airline'
 
+colorscheme Tomorrow-Night
+
+set nocursorline
+set nocursorcolumn
 set number
-set ruler
 syntax on
 set encoding=utf-8
 
-set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
-
-" Whitespace stuff
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=tab:▸\ ,trail:·,eol:¬
+set nowrap
+set textwidth=0
+set colorcolumn=0
 
-"Invisible character colors
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Invisibles
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+" Invisible character colors
 highlight NonText guifg=#073642
 highlight SpecialKey guifg=#073642
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
-
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-filetype plugin indent on " required!
-
-" excerpts from Coming home to Vim article
-let mapleader = ","
-nnoremap / /\v
-vnoremap / /\v
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
-set wrap
-set textwidth=79
-set formatoptions=qrn1
-set colorcolumn=85
-nnoremap ; :
-nnoremap <leader>w <C-w>v<C-w>l
-
-set vb
-set ch=2
-
-set showmode
-
 set nocursorline
 set nocursorcolumn
+
+filetype plugin indent on
+
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>

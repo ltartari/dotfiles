@@ -2,20 +2,16 @@ Dot Files
 
 current environment:
   zsh
-  mvim with janus
-  ack
+  vim & macvim
   git
   ruby
-  node.js
-
-TO DO: make install.sh set the symlinks.
  __________________________________
-< Now you're thinking with Portals >
+| Now you're thinking with Portals |
  ----------------------------------
      \
       \
-        ,__, |            |
-        (oo)\|            |___
-        (__)\|            |   )\_
-             |            |_w |  \
-             |            |  ||   *
+        ,__, |                  |
+        (oo)\|                  |___
+        (__)\|                  |   )\_
+             |                  |_w |  \
+             |                  |  ||   *
