@@ -1,3 +1,8 @@
+" Automatically setup Vundle on first run
+if !isdirectory(expand("~/.vim/bundle/vundle"))
+    call system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
+endif
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -5,7 +10,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'

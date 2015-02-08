@@ -1,3 +1,4 @@
 # global gitignore
 *.DS_Store
 *.sw[nop]
+*.rdb
