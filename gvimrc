@@ -1,5 +1,5 @@
-set guifont=Menlo:h15
-set linespace=4
+set guifont=Menlo\ Regular\ for\ Powerline:h16
+set linespace=1
 
 " Disable toolbar
 set guioptions=egmrt
