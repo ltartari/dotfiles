@@ -11,6 +11,8 @@ prompt off
 
 setopt PROMPT_SUBST
 
+export CLICOLOR=1
+
 typeset -ga preexec_functions
 typeset -ga precmd_functions
 typeset -ga chpwd_functions
@@ -23,19 +25,13 @@ for zsh_source in $HOME/.zsh/*.zsh; do
   source $zsh_source
 done
 
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
-fi
-
-# export CC=/usr/bin/gcc-4.2
-
-alias tmux="TERM=screen-256color-bce tmux"
-
-source ~/.nvm/nvm.sh
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export SSL_CERT_FILE=/Users/leonardotartari/.cacert.pem
-
 source "$HOME/.private-env"
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+

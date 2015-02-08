@@ -29,3 +29,6 @@ alias mvim="mvim --remote-silent"
 alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
 
 alias git="hub"
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
