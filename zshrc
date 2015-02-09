@@ -31,7 +31,4 @@ done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-source "$HOME/.private-env"
-
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
