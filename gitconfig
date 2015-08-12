@@ -1,6 +1,8 @@
 [user]
   name            = Leo Tartari
   email           = ltartari@gmail.com
+[github]
+  user            = ltartari
 [color]
   diff            = auto
   status          = auto
@@ -21,15 +23,18 @@
   ls              = ls-files
   latest          = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
 [core]
-  editor          = vim
-  excludesfile    = /Users/leonardotartari/.gitignore
+  editor          = vimr
+  excludesfile    = ~/.gitignore
+  pager           = less -FRSX
 [merge]
   tool            = opendiff
 [branch]
   autosetupmerge  = true
-[github]
-	user = ltartari
-[ghi]
-	token = a1aee51a886ef98eaad586e3f50a3c57e1bed9e2
 [push]
-	default = matching
+  default         = current
+[pull]
+  rebase          = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

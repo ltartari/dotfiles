@@ -1,34 +1,25 @@
 #!/bin/zshrc
 
-fpath=(~/.zsh/functions $fpath)
+source /usr/local/Cellar/antigen/1/share/antigen.zsh
 
-autoload -U ~/.zsh/functions/*(:t)
-autoload -U compinit && compinit
-autoload -U colors && colors
-autoload -Uz promptinit && promptinit
+antigen use oh-my-zsh
 
-prompt off
+antigen bundle git
+antigen bundle heroku
+antigen bundle command-not-found
+antigen bundle brew
+antigen bundle common-aliases
+antigen bundle compleat
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle osx
+antigen bundle z
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 
-setopt PROMPT_SUBST
+antigen theme https://gist.github.com/ltartari/0de75ffe1424ac0e6389 ltartari
 
-export CLICOLOR=1
-
-typeset -ga preexec_functions
-typeset -ga precmd_functions
-typeset -ga chpwd_functions
-
-preexec_functions+='preexec_update_git_vars'
-precmd_functions+='precmd_update_git_vars'
-chpwd_functions+='chpwd_update_git_vars'
-
-for zsh_source in $HOME/.zsh/*.zsh; do
-  source $zsh_source
-done
+antigen apply
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
