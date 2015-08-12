@@ -1,6 +1,7 @@
 dotfiles
 
-using rcm for symlinking dotfiles
+```
+using [RCM](https://github.com/thoughtbot/rcm) for managing the dotfiles.
  __________________________________
 | Now you're thinking with Portals |
  ----------------------------------
@@ -11,8 +12,7 @@ using rcm for symlinking dotfiles
         (__)\|                  |   )\_
              |                  |_w |  \
              |                  |  ||   *
-
-using [RCM](https://github.com/thoughtbot/rcm) for managing the dotfiles.
+```
 
 1) install RCM via brew
 
@@ -21,11 +21,13 @@ using [RCM](https://github.com/thoughtbot/rcm) for managing the dotfiles.
   `brew install rcm`
 
 2) clone this repo onto your `$HOME`
+
   `git clone git@github.com:ltartari/dotfiles.git ~/.dotfiles`
 
 3) run `rcup` from inside the `~/.dotfiles` folder.
 
 should set up environment for:
-  zsh with antigen
-  vim & vimr with a bunch of useless stuff
-  aliases for lazy people
+
+*  zsh with antigen
+*  vim & vimr with a bunch of useless stuff
+*  aliases for lazy people
