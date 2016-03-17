@@ -4,6 +4,7 @@ set linespace=1
 " Disable toolbar
 set guioptions=egmrt
 
-" Command-/ to toggle comments
-map <D-/> <plug>NERDCommenterToggle<CR>
-imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+colorscheme base16-duotone-dark

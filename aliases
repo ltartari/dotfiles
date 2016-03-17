@@ -1,25 +1,19 @@
 alias r="rails"
 alias g="git"
 
-alias s="bundle exec rspec"
-alias cuc="bundle exec cucumber"
-
 alias switcheroo="git stash && git pull --rebase && git stash pop"
-alias gobliterate="!git remote prune origin && git gc && git clean -df && git stash clear"
-alias ggrep="git grep -A 4 -B 4"
 
 alias b="bundle"
 alias be="bundle exec"
 alias ln="ln -v"
 alias mkdir="mkdir -p"
-
 alias ls="ls -G"
-alias ll="ls -al"
+alias ll="ls -alh"
 
 alias grep="grep --color=auto"
 
 alias tmux="TERM=screen-256color-bce tmux -u"
 
-alias mvim="vimr" # pavlovian
-
 alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
+
+alias brup="brew update && brew upgrade --all && brew cleanup && brew linkapps"

@@ -23,7 +23,7 @@
   ls              = ls-files
   latest          = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
 [core]
-  editor          = vimr
+  editor          = vim
   excludesfile    = ~/.gitignore
   pager           = less -FRSX
 [merge]
@@ -35,6 +35,8 @@
 [pull]
   rebase          = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[help]
+  autocorrect = -1

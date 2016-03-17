@@ -1,8 +1,4 @@
 typeset -U path
 
-export PATH="/usr/local/bin:/usr/local/sbin:/$HOME/.bin:/$HOME/.zsh/functions:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/$HOME/.bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# Load local environment configuration
-[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
-
