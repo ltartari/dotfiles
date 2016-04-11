@@ -7,4 +7,4 @@ set guioptions=egmrt
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-colorscheme base16-duotone-dark
+colorscheme duotone-dark
