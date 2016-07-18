@@ -32,6 +32,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'junegunn/fzf'
 Bundle 'git://github.com/csscomb/vim-csscomb.git'
 Bundle 'https://github.com/atelierbram/vim-colors_duotones.git'
+Bundle 'editorconfig/editorconfig-vim'
+
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
