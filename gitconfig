@@ -1,6 +1,7 @@
 [user]
   name            = Leo Tartari
   email           = ltartari@gmail.com
+	signingkey = D8B3286FFE4CF6FA
 [github]
   user            = ltartari
 [color]
