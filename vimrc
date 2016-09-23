@@ -1,63 +1,51 @@
-" Automatically setup Vundle on first run
-if !isdirectory(expand("~/.vim/bundle/vundle"))
-  call system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
-endif
+set nocompatible  " be iMproved, required
+filetype off      " required!
 
-set nocompatible " be iMproved
-filetype off " required!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.fzf
-call vundle#rc()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ap/vim-css-color'
+Plugin 'bling/vim-airline'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'https://github.com/chriskempson/vim-tomorrow-theme.git'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'kien/ctrlp.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'junegunn/fzf'
+Plugin 'git://github.com/csscomb/vim-csscomb.git'
+Plugin 'https://github.com/atelierbram/vim-colors_duotones.git'
+Plugin 'editorconfig/editorconfig-vim'
 
-Bundle 'airblade/vim-gitgutter'
-Bundle 'ap/vim-css-color'
-Bundle 'bling/vim-airline'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'kien/ctrlp.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'junegunn/fzf'
-Bundle 'git://github.com/csscomb/vim-csscomb.git'
-Bundle 'https://github.com/atelierbram/vim-colors_duotones.git'
-Bundle 'editorconfig/editorconfig-vim'
-
-
-" Automatically install bundles on first run
-if !isdirectory(expand("~/.vim/bundle/vim-airline"))
-    execute 'silent BundleInstall'
-    execute 'silent q'
-endif
+call vundle#end()           " required
+filetype plugin indent on   " required
 
 au BufNewFile,BufRead *.coffee.erb setf eruby.coffee
 
 set background=dark
+syntax on
 colorscheme Tomorrow-Night-Eighties
-
 
 set expandtab
 set laststatus=2
-set noautoindent
 set nowrap
 set number
-set norelativenumber
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set textwidth=0
-syntax on
+
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 set nobackup
 set nowritebackup
@@ -70,8 +58,6 @@ set list
 " Invisible character colors
 highlight NonText guifg=#174652
 highlight SpecialKey guifg=#174652
-
-filetype plugin indent on
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
