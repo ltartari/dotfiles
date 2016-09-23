@@ -1,18 +1,17 @@
 #!/bin/zshrc
 
-source $(brew --prefix)/share/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 
-antigen bundle compleat
-antigen bundle git-extras
-antigen bundle git-flow
-antigen bundle osx
-antigen bundle z
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
-antigen bundle zsh-users/zaw
+antigen bundles <<EOBUNDLES
+  compleat
+  git-extras
+  git-flow
+  osx
+  zsh-users/zsh-syntax-highlighting
 
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+  mafredri/zsh-async
+  sindresorhus/pure
+EOBUNDLES
 
 antigen apply
 
@@ -21,6 +20,5 @@ antigen apply
 
 # zsh env
 [[ -f ~/.zshenv ]] && source ~/.zshenv
-
 
 # defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
