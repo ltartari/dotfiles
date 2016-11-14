@@ -8,23 +8,32 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ap/vim-css-color'
 Plugin 'bling/vim-airline'
-Plugin 'hail2u/vim-css3-syntax'
 Plugin 'https://github.com/chriskempson/vim-tomorrow-theme.git'
-Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'ap/vim-css-color'
+
 Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'slim-template/vim-slim'
+Plugin 'digitaltoad/vim-jade'
+
 Plugin 'tpope/vim-fugitive'
+
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+
 Plugin 'kien/ctrlp.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'junegunn/fzf'
 Plugin 'git://github.com/csscomb/vim-csscomb.git'
+
 Plugin 'https://github.com/atelierbram/vim-colors_duotones.git'
 Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'isRuslan/vim-es6'
+Plugin 'mxw/vim-jsx'
+
 
 call vundle#end()           " required
 filetype plugin indent on   " required
@@ -36,13 +45,15 @@ syntax on
 colorscheme Tomorrow-Night-Eighties
 
 set expandtab
+set softtabstop=2
+set tabstop=2
+
 set laststatus=2
 set nowrap
 set number
 set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 set textwidth=0
+set showmatch " highlight matching {[()]}
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
