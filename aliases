@@ -16,5 +16,5 @@ alias tmux="TERM=screen-256color-bce tmux -u"
 
 alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
 
-alias brup="brew update && brew upgrade --all && brew cleanup && brew linkapps"
+alias brup="brew update && brew upgrade && brew cleanup && brew linkapps"
 alias git=hub
