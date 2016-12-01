@@ -17,6 +17,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'othree/html5.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'slime-lang/vim-slime-syntax.git'
 
 Plugin 'tpope/vim-fugitive'
 
