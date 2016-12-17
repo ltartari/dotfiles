@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/chriskempson/vim-tomorrow-theme.git'
 
 Plugin 'hail2u/vim-css3-syntax'
@@ -35,51 +36,48 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'isRuslan/vim-es6'
 Plugin 'mxw/vim-jsx'
 
+Plugin 'vimwiki'
+
 
 call vundle#end()           " required
 filetype plugin indent on   " required
 
-au BufNewFile,BufRead *.coffee.erb setf eruby.coffee
+au BufNewFile,BufRead *.coffee.erb setf eruby.coffee " for coffescript syntax on erb files
 
-set background=dark
 syntax on
-colorscheme Tomorrow-Night-Eighties
+set background=dark
+colorscheme Tomorrow-Night-Bright
 
 set expandtab
 set softtabstop=2
 set tabstop=2
 
-set laststatus=2
-set nowrap
-set number
-set shiftwidth=2
-set textwidth=0
+set laststatus=2 " force the display of the status line. required for vim-airline
+
+set nowrap " don't break long text lines
+set textwidth=0 " disable wrapping
+set colorcolumn=80 " display ruler ideal max-width
+
+set number " show line numbers
+set shiftwidth=0 " don't assume indent on next line
 set showmatch " highlight matching {[()]}
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-set nobackup
-set nowritebackup
-set noswapfile
-
-" Invisibles
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_ " Invisibles
 set list
 
-" Invisible character colors
-highlight NonText guifg=#174652
+highlight NonText guifg=#174652 " Invisible character colors
 highlight SpecialKey guifg=#174652
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '›'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '‹'
+let g:airline_powerline_fonts = 1
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = '·'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
