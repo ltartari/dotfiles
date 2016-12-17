@@ -1,0 +1,13 @@
+antigen bundles <<EOBUNDLES
+  compleat
+  git-extras
+  git-flow
+  osx
+  zsh-users/zsh-syntax-highlighting
+
+  mafredri/zsh-async
+  sindresorhus/pure
+EOBUNDLES
+
+antigen apply
+

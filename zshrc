@@ -1,19 +1,7 @@
 #!/bin/zshrc
 
 source $(brew --prefix)/share/antigen/antigen.zsh
-
-antigen bundles <<EOBUNDLES
-  compleat
-  git-extras
-  git-flow
-  osx
-  zsh-users/zsh-syntax-highlighting
-
-  mafredri/zsh-async
-  sindresorhus/pure
-EOBUNDLES
-
-antigen apply
+antigen init .antigenrc
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
