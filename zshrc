@@ -9,8 +9,7 @@ antigen init .antigenrc
 # zsh env
 [[ -f ~/.zshenv ]] && source ~/.zshenv
 
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
+# colored man pages
 man() {
   LESS_TERMCAP_md=$'\e[01;31m' \
   LESS_TERMCAP_me=$'\e[0m' \
