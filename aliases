@@ -1,8 +1,6 @@
 alias r="rails"
 alias g="git"
 
-alias switcheroo="git stash && git pull --rebase && git stash pop"
-
 alias b="bundle"
 alias be="bundle exec"
 alias ln="ln -v"
@@ -17,7 +15,9 @@ alias tmux="TERM=screen-256color-bce tmux -u"
 
 alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
 
-alias brup="brew update && brew upgrade && brew cleanup"
+alias brup="brew update -v && brew upgrade -v && brew cleanup -v"
+alias switcheroo="git stash && git pull --rebase && git stash pop"
+alias restart_wifi="sudo ifconfig en1 down && sudo ifconfig en1 up"
+
 alias git=hub
 
-alias restart_wifi="sudo ifconfig en1 down && sudo ifconfig en1 up"
