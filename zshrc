@@ -19,3 +19,8 @@ man() {
   LESS_TERMCAP_us=$'\e[01;32m' \
   command man "$@"
 }
+
+# quiet ssh-agent
+ssh-add -l | grep -q `ssh-keygen -lf ~/.ssh/id_rsa.pub  | awk '{print $2}'` || ssh-add ~/.ssh/id_rsa.pub
+
+export PURE_PROMPT_SYMBOL=∴
