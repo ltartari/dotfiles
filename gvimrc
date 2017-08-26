@@ -1,7 +1,4 @@
-set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h17
-set linespace=1
-
-" Disable toolbar
-set guioptions=egmrt
-
-colorscheme duotone-darkspace
+set guifont=Iosevka\ Term\ Light:h18 " font
+set guioptions=egmr " disable toolbar
+set linespace=0 " reset linespace
+set visualbell " disable beeps
