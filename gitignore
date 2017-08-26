@@ -2,3 +2,5 @@
 *.DS_Store
 *.sw[nop]
 *.rdb
+tags
+TODO.leo.md

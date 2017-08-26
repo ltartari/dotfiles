@@ -1,14 +1,11 @@
 [user]
   name            = Leo Tartari
   email           = ltartari@gmail.com
-	signingkey = D8B3286FFE4CF6FA
+  signingkey      = D8B3286FFE4CF6FA
 [github]
   user            = ltartari
-[color]
-  diff            = auto
-  status          = auto
-  branch          = auto
-  interactive     = auto
+[credential]
+  helper          = osxkeychain
 [alias]
   pr              = pull --rebase
   s               = status
@@ -18,30 +15,38 @@
   dc              = diff --cached
   l               = log
   lg              = log -p
-  lol             = log --graph --decorate --pretty=oneline --abbrev-commit
   lola            = log --graph --decorate --pretty=oneline --abbrev-commit --all
   lll             = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ls              = ls-files
   latest          = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+  prune           = fetch --prune
+  undo            = reset --soft HEAD^
+  stash-all       = stash save --include-untracked
+[branch]
+  autosetupmerge  = true
+[color]
+  diff            = auto
+  status          = auto
+  branch          = auto
+  interactive     = auto
+[commit]
+  gpgsign         = true
 [core]
   editor          = vim
   excludesfile    = ~/.gitignore
   pager           = less -FRSX
+[filter "lfs"]
+  clean           = git-lfs clean %f
+  smudge          = git-lfs smudge %f
+  required        = true
+[help]
+  autocorrect     = -1
 [merge]
   tool            = opendiff
-[branch]
-  autosetupmerge  = true
-[push]
-  default         = current
 [pull]
   rebase          = true
-[filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true
-[help]
-  autocorrect = -1
-[commit]
-  gpgsign = true
-[credential]
-  helper = osxkeychain
+[push]
+  default         = current
+[gpg]
+  program = gpg2
+	program = /usr/local/bin/gpg
