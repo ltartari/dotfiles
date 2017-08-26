@@ -1,33 +1,26 @@
-dotfiles
+# dotfiles
 
-```
-using [RCM](https://github.com/thoughtbot/rcm) for managing the dotfiles.
- __________________________________
-| Now you're thinking with Portals |
- ----------------------------------
-     \
-      \
-        ,__, |                  |
-        (oo)\|                  |___
-        (__)\|                  |   )\_
-             |                  |_w |  \
-             |                  |  ||   *
-```
+## System initialization (first run):
 
-1) install RCM via brew
+### 1) Download & install Xcode via App Store
 
-  `brew tap thoughtbot/formulae`
+- Xcode
 
-  `brew install rcm`
 
-2) clone this repo onto your `$HOME`
+### 2) Install Xcode and BSD tools
 
-  `git clone git@github.com:ltartari/dotfiles.git ~/.dotfiles`
+  `% xcode-select --install`
 
-3) run `rcup` from inside the `~/.dotfiles` folder.
 
-should set up environment for:
+### 3) Run the installation script
 
-*  zsh with antigen
-*  vim & vimr with a bunch of useless stuff
-*  aliases for lazy people
+  **/!\ will require restart /!\**
+
+  `% ruby install.rb`
+
+
+## System update:
+
+### 1) Run rcup
+
+  `% rcup`
