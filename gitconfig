@@ -1,7 +1,7 @@
 [user]
   name            = Leo Tartari
   email           = ltartari@gmail.com
-  signingkey      = D8B3286FFE4CF6FA
+  signingkey      = 781D33B504E01D90
 [github]
   user            = ltartari
 [credential]
@@ -22,6 +22,7 @@
   prune           = fetch --prune
   undo            = reset --soft HEAD^
   stash-all       = stash save --include-untracked
+  standup         = log --since=7.days --author=ltartari --format=oneline
 [branch]
   autosetupmerge  = true
 [color]
@@ -31,6 +32,7 @@
   interactive     = auto
 [commit]
   gpgsign         = true
+  template = ~/.gitmessage
 [core]
   editor          = vim
   excludesfile    = ~/.gitignore
@@ -48,5 +50,4 @@
 [push]
   default         = current
 [gpg]
-  program = gpg2
 	program = /usr/local/bin/gpg
