@@ -75,26 +75,19 @@ end
 check_for_dependencies
 
 title 'macOS configuration'
+
+# Keyboard
 info 'Disable diacritics panel on key press and hold'
 run 'defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false'
 
-info 'Faster KeyRepeat'
-run 'defaults write -g NSGlobalDomain KeyRepeat -int 2'
-
-info 'Faster InitialKeyRepeat'
-run 'defaults write -g NSGlobalDomain InitialKeyRepeat -float 15'
-
-info 'Reduce Transparency'
-run 'defaults write com.apple.universalaccess reduceTransparency -bool true'
-
-info 'Show Attachments as Icons'
-run 'defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes'
-
-info 'Show All File Extensions'
-run 'defaults write -g AppleShowAllExtensions -bool true'
-
 info 'Disable Auto-Correct'
 run 'defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false'
+
+info 'Faster KeyRepeat'
+run 'defaults write NSGlobalDomain KeyRepeat -int 2'
+
+info 'Faster InitialKeyRepeat'
+run 'defaults write NSGlobalDomain InitialKeyRepeat -int 15'
 
 title 'Screen shot keyboard shortcuts'
 key = {
@@ -128,6 +121,15 @@ shortcuts.each do |shortcut|
   run "defaults write -g NSUserKeyEquivalents '#{formatted_shortcut}'"
 end
 
+# Acessibility
+info 'Reduce Transparency'
+run 'defaults write com.apple.universalaccess reduceTransparency -bool true'
+
+# Mail
+info 'Show Attachments as Icons'
+run 'defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes'
+
+
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 title 'SSD specific tweaks'
 info 'Disable hibernation (speeds up entering sleep mode)'
@@ -144,6 +146,9 @@ run 'sudo chflags uchg /private/var/vm/sleepimage'
 
 info 'Disable the sudden motion sensor as it’s not useful for SSDs'
 run 'sudo pmset -a sms 0'
+
+info 'Finder: Show All File Extensions'
+run 'defaults write -g AppleShowAllExtensions -bool true'
 
 info 'Finder: disable window animations and Get Info animations'
 run 'defaults write com.apple.finder DisableAllAnimations -bool true'
@@ -227,19 +232,14 @@ casks = [
   'atom',
   'licecap', # gifs from screencapture
   'macvim',
-  'ngrok',
-  'sketch',
   'sketchup',
-  'skyfonts',
   'virtualbox',
   'java',
-  'ukelele', # keyboard remap
 
   # book management
   'calibre',
 
   # browsers
-  'brave',
   'chromium',
   'firefox',
   'google-chrome',
@@ -248,11 +248,7 @@ casks = [
 
   # communication
   'keybase',
-  'screenhero',
-  'skype',
-  'slack',
   'telegram',
-  'zoomus',
 
   # entertainment
   'transmission',
@@ -262,12 +258,12 @@ casks = [
   'steam',
 
   # plugins for quick look
-  'betterzipql',
   'qlcolorcode',
   'qlimagesize',
   'qlmarkdown',
   'qlstephen',
-  'quicklook-json'
+  'quicklook-json',
+  'suspicious-package'
 ]
 
 casks.each do |cask|
@@ -277,28 +273,20 @@ end
 
 formulae = [
   # languages
-  'elixir',
-  'erlang',
   'node',
   'rbenv',
   'rcm',
   'ruby-build',
 
   # dependencies
-  'mysql',
   'postgresql',
-  'sqlite',
-  'v8',
   'yarn',
 
   # tools
   'antigen',
-  'ctags',
   'bcrypt',
   'heroku',
   'htop',
-  'tmux',
-  'tree',
   'zsh'
 ]
 
