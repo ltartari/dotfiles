@@ -32,7 +32,6 @@
   interactive     = auto
 [commit]
   gpgsign         = true
-  template = ~/.gitmessage
 [core]
   editor          = vim
   excludesfile    = ~/.gitignore
@@ -50,4 +49,4 @@
 [push]
   default         = current
 [gpg]
-	program = /usr/local/bin/gpg
+  program         = /usr/local/bin/gpg
