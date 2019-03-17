@@ -29,7 +29,7 @@
 [credential]
   helper          = osxkeychain
 [core]
-  editor          = vim
+  editor          = /usr/local/bin/mvim -f
   excludesfile    = ~/.gitignore
   pager           = less -FRSX
 [filter "lfs"]
