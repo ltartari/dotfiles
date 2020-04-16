@@ -5,20 +5,27 @@
   co              = checkout
   ci              = commit
   dc              = diff --cached
-  l               = log
-  lg              = log -p
-  lola            = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  lll             = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  ls              = ls-files
-  latest          = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
   prune           = fetch --prune
   undo            = reset --soft HEAD^
   stash-all       = stash save --include-untracked
-  standup         = shortlog --since=1.days --author=ltartari
-  allhands        = shortlog --since=7.days --author=ltartari
   praise          = blame
+
+  # Logging
+  l               = "!. ~/.githelpers && pretty_git_log"
+  la              = !git l --all
+  lll             = la
+  log             = l
+  ls              = ls-files
+  r               = !GIT_NO_PAGER=1 git l -30
+
+  # Project logging
+  standup         = shortlog --since=1.days --author=ltartari
+  devsync         = standup
+  allhands        = shortlog --since=7.days --author=ltartari
+  all-hands       = allhands
 [branch]
   autosetupmerge  = true
+  sort            =-committerdate
 [color]
   diff            = auto
   status          = auto
@@ -29,7 +36,7 @@
 [credential]
   helper          = osxkeychain
 [core]
-  editor          = /usr/local/bin/mvim -f
+  editor          = /usr/local/bin/nvim -f
   excludesfile    = ~/.gitignore
   pager           = less -FRSX
 [filter "lfs"]
@@ -40,8 +47,11 @@
   user            = ltartari
 [gpg]
   program         = /usr/local/bin/gpg
+[diff]
+  diff-algorithm = histogram
 [grep]
   lineNumber      = true
+  ignoreCase = true
 [help]
   autocorrect     = -1
 [merge]
@@ -54,3 +64,5 @@
   name            = Leo Tartari
   email           = ltartari@gmail.com
   signingkey      = 781D33B504E01D90
+[url "git@github.com:"]
+	insteadOf = https://github.com/

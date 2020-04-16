@@ -229,15 +229,15 @@ run 'brew tap caskroom/cask'
 
 casks = [
   # design & dev tools
-  'atom',
+  'atom', # markdown editor
+  'imageoptim', # img compressor
   'licecap', # gifs from screencapture
-  'macvim',
-  'sketchup',
-  'virtualbox',
-  'java',
+  'macvim', # code editor
+  'sketchup', # 3d drawing
+  'virtualbox', # virtualization
+  'java', # virtualbox dependency
 
-  # book management
-  'calibre',
+  'calibre', # book management
 
   # browsers
   'chromium',
@@ -255,6 +255,7 @@ casks = [
   'vlc',
 
   # games
+  'openemu', # old console emulators
   'steam',
 
   # plugins for quick look

@@ -1,33 +1,24 @@
-alias r="rails"
-alias g="git"
-
 alias b="bundle"
 alias be="bundle exec"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
-alias ls="ls -G"
-alias l="ls -1a"
-alias ll="ls -Falh"
-
-alias grep="grep --color=auto"
-alias tree="tree -C"
-alias which="which -a"
-
-alias tmux="TERM=screen-256color-bce tmux -u"
-
-alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
-
 alias brup="brew update && brew upgrade && brew cleanup"
-alias switcheroo="git stash && git pull --rebase && git stash pop"
+alias cat="ccat"
+alias ctags="`brew --prefix`/bin/ctags"
+alias du="du -hc"
+alias find="/usr/local/bin/fd"
+alias g="git"
+alias grep="grep -i --color=auto"
+alias l="ls -1a"
+alias less="less -FXRS"
+alias ll="ls -Falh"
+alias ln="ln -v"
+alias ls="ls -G"
+alias mkdir="mkdir -p"
+alias r="rails"
 alias restart_wifi="sudo ifconfig en1 down && sudo ifconfig en1 up"
 alias run="open -n -a"
-
-alias get_random_password='LC_ALL=C tr -dc "[:alpha:][:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
-alias lock_me="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias check_updates="sudo softwareupdate -l"
-
-alias du="du -hc"
-
-alias find="/usr/local/bin/fd"
-
-alias cat="ccat"
+alias switcheroo="git stash-all && git pull --rebase && git stash pop"
+alias tmux="TERM=screen-256color-bce tmux -u"
+alias tree="tree -C"
+alias use="/bin/ls -1A | tr '\n' '\0' | xargs -0 du -sk | sort -n" # list total disk usage for current folder contents
+alias which="which -a"
+alias promote_all="heroku pipelines:promote -r hp && heroku pipelines:promote -r mim"
