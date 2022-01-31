@@ -1,15 +1,11 @@
 antigen bundles <<EOBUNDLES
-  # compleat
-  # git-extras
-  # git-flow
   brew
-  bundler
   colored-man-pages
   command-not-found
   git
   heroku
+  macos
   mafredri/zsh-async
-  osx
   sindresorhus/pure
   zsh-users/zsh-syntax-highlighting
 EOBUNDLES
