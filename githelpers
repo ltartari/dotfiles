@@ -27,7 +27,7 @@ LOG_FORMAT="$LOG_HASH}$LOG_RELATIVE_TIME}$LOG_AUTHOR}$LOG_REFS $LOG_SUBJECT"
 
 BRANCH_PREFIX="%(HEAD)"
 BRANCH_REF="%(color:red)%(color:bold)%(refname:short)%(color:reset)"
-BRANCH_HASH="%(color:yellow)%(objectname:short)%(color:reset)"
+BRANCH_HASH="%(color:yllow)%(objectname:short)%(color:reset)"
 BRANCH_DATE="%(color:green)(%(committerdate:relative))%(color:reset)"
 BRANCH_AUTHOR="%(color:blue)%(color:bold)<%(authorname)>%(color:reset)"
 BRANCH_CONTENTS="%(contents:subject)"
@@ -40,7 +40,7 @@ show_git_head() {
 }
 
 pretty_git_log() {
-    git log --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+    git log --graph --pretty="tformat:${LOG_FORMAT}" --no-show-signature $* | pretty_git_format | git_page_maybe
 }
 
 pretty_git_branch() {
@@ -48,7 +48,7 @@ pretty_git_branch() {
 }
 
 pretty_git_branch_sorted() {
-    git branch -v --format=${BRANCH_FORMAT} --sort=-committerdate $* | pretty_git_format
+    git branch -v --color=always --format=${BRANCH_FORMAT} --sort=-committerdate $* | pretty_git_format
 }
 
 pretty_git_format() {
