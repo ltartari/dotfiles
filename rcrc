@@ -1,2 +1,7 @@
-EXCLUDES="README.md install.rb"
+EXCLUDES=(
+  "$HOME/.dotfiles:README.md"
+  "$HOME/.dotfiles:install.rb"
+)
+
+EXCLUDES=${EXCLUDES[@]}
 DOTFILES_DIRS="$HOME/.dotfiles"
