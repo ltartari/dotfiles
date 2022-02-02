@@ -61,8 +61,10 @@
 [push]
   default         = current
 [user]
-  name            = Leo Tartari
-  email           = ltartari@gmail.com
-  signingkey      = 781D33B504E01D90
+  name = Leo Tartari
+  email = ltartari@gmail.com
+  signingkey      = 99212F3557D32324
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
+[init]
+  defaultBranch = main
