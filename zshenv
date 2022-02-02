@@ -1,15 +1,26 @@
-typeset -U path
+# use ripgrep for FZF
+FZF_DEFAULT_COMMAND="rg --files --follow --hidden"
 
-KEYTIMEOUT=1
-BROWSER="/Applications/Firefox.app/Contents/MacOS/firefox"
-EDITOR="/usr/local/bin/mvim"
-FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
+# miscelaneous env vars
+
+HISTCONTROL="ignoreboth"
+
+# enable heroku autocomplete
+HEROKU_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# default browser
+CHROME="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+# FIREFOX="/Applications/Firefox.app/Contents/MacOS/firefox"
+# use chrome as the env browser
+# alternatively, enable and change to FIREFOX
+BROWSER="$CHROME"
+
 GPG_TTY=$(tty)
-PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
-PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-PATH="/usr/local/opt/libpq/bin:$PATH"
-PATH="/usr/local/opt/python/libexec/bin:$PATH"
-OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-export BROWSER EDITOR FZF_DEFAULT_COMMAND GPG_TTY PATH OBJC_DISABLE_INITIALIZE_FORK_SAFETY KEYTIMEOUT
+KEYTIMEOUT=1
+TERM="screen-256color"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# use neovim as editor
+EDITOR="/usr/local/bin/nvim"
+
+# Show therefore icon as prompt symbol
+PURE_PROMPT_SYMBOL=∴

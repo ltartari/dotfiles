@@ -1,28 +1,28 @@
-# keep line below for spotify error on login
-export ZSH_THEME=""
-export ZSH=~/.antigen/bundles/robbyrussell/oh-my-zsh
+# Allow bypass for commands that start with an empty space " "
+setopt HIST_IGNORE_SPACE
 
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export PURE_PROMPT_SYMBOL=∴
+# Enable showing stash state for git repos
+zstyle :prompt:pure:git:stash show yes
+
+# Enable antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
-antigen init ~/.antigenrc
+antigen init $HOME/.antigenrc
 
+# Use emacs movement
 set -o emacs
 
-# aliases
+# load aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# zsh env
-[[ -f ~/.zshenv ]] && source ~/.zshenv
-
-# Use C-x C-e to edit the current command line
+# Allow use of C-x C-e to edit the current command
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
+# Enable comments
 setopt interactivecomments
 
-# adds colour to man pages
+# Man pages… in colour (cue police squad theme)
 man() {
   LESS_TERMCAP_md=$'\e[01;31m' \
   LESS_TERMCAP_me=$'\e[0m' \
@@ -33,5 +33,21 @@ man() {
   command man "$@"
 }
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/ltartari/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# Enable rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Enable FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Override path stuff
+path+=("/usr/local/opt/libpq/bin")
+path+=("/usr/local/sbin")
+
+# Add any local ./bin folder to the path
+path=("./bin" ${path:#${dir}})
+
+# Deduplicate path items
+typeset -U path
+
+# let ruby know to use openssl version 1.1 from brew
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
