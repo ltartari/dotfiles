@@ -6,7 +6,7 @@ antigen bundles <<EOBUNDLES
   heroku
   macos
   mafredri/zsh-async
-  sindresorhus/pure
+  sindresorhus/pure@main
   zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
