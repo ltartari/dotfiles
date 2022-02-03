@@ -46,7 +46,7 @@
 [github]
   user            = ltartari
 [gpg]
-  program         = /usr/local/bin/gpg
+	program = gpg
 [diff]
   diff-algorithm = histogram
 [grep]
