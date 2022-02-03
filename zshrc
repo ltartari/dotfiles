@@ -1,3 +1,4 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # Allow bypass for commands that start with an empty space " "
 setopt HIST_IGNORE_SPACE
 
